@@ -22,3 +22,17 @@ function on_pin_pressed_p2() {
 }
 
 input.onPinPressed(TouchPin.P0, on_pin_pressed_p0)
+radio.onReceivedValue(function on_received_value(name: string, value: number) {
+    let pocetA = 0
+    let pocetB = 0
+    let pocetC = 0
+    let pocetD = 0
+    if (name == "vote" && value == 1) {
+        pocetA += 1
+    }
+    
+    if (name == "vote" && value == 2) {
+        pocetB += 1
+    }
+    
+})

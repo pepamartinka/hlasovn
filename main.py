@@ -25,5 +25,16 @@ def on_pin_pressed_p2():
     radio.send_value("vote", 4)
 input.on_pin_pressed(TouchPin.P0, on_pin_pressed_p0)
 
- 
+
+def on_received_value(name, value):
+    pocetA=0
+    pocetB=0
+    pocetC=0
+    pocetD=0
+    if name == "vote" and value == 1:
+        pocetA +=1
+
+    if name == "vote" and value == 2:
+        pocetB+=1
+radio.on_received_value(on_received_value)
 
