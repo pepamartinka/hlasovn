@@ -1,5 +1,5 @@
 {
-    "name": "hlasování",
+    "name": "hlasování-klient",
     "description": "",
     "dependencies": {
         "core": "*",
